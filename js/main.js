@@ -7,7 +7,7 @@
 (function (window, document) {
   'use strict';
 
-  const OCEAN    = window.OCEAN;
+  const OCEAN    = window.OCEAN || { config: { prefersReducedMotion: false }, utils: {}, state: {} };
   const SETTINGS = window.OCEAN_SETTINGS || {};
 
   /* ── Loading screen ─────────────────────────────────────── */
@@ -185,9 +185,9 @@
     const whatsappBtn = document.getElementById('whatsapp-reply-btn');
     
     // Set up WhatsApp link if configured
-    if (whatsappBtn && window.OCEAN_SETTINGS.whatsappNumber) {
-      const num = window.OCEAN_SETTINGS.whatsappNumber;
-      const msg = encodeURIComponent(window.OCEAN_SETTINGS.whatsappMessage || "Hi!");
+    if (whatsappBtn && SETTINGS.whatsappNumber) {
+      const num = SETTINGS.whatsappNumber;
+      const msg = encodeURIComponent(SETTINGS.whatsappMessage || "Hi!");
       whatsappBtn.href = `https://wa.me/${num}?text=${msg}`;
     }
     
@@ -205,7 +205,7 @@
                 signoff.textContent = 'Wish granted.';
                 signoff.style.opacity = '1';
                 // Reveal whatsapp button
-                if (whatsappBtnWrap && window.OCEAN_SETTINGS.whatsappNumber) {
+                if (whatsappBtnWrap && SETTINGS.whatsappNumber) {
                   whatsappBtnWrap.classList.add('is-visible');
                 }
               }, 400);
