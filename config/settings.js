@@ -53,7 +53,7 @@ const GALLERY_PHOTOS = [
   { file: "img5.jpeg", caption: "Kamu ubah benda biasa jadi sesuatu yang tak mudah aku lupakan." },
   { file: "img6.jpeg", caption: "Hati aku rasa paling tenang bila dekat dengan kamu, even then." },
   { file: "img7.jpeg", caption: "Kalau boleh ulang satu masa, aku pilih kita, every single time." },
-  { file: "img8.jpeg", caption: "Kamu tetap orang yang paling aku ingat, walau apa pun.” },
+  { file: "img8.jpeg", caption: "Kamu tetap orang yang paling aku ingat, walau apa pun." },
 ];
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
